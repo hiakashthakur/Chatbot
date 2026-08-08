@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const questionInput = document.getElementById('questionInput');
     const sendBtn = document.getElementById('sendBtn');
     
+    // Mobile Elements
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeSidebarBtn = document.getElementById('closeSidebarBtn');
+    const sidebar = document.querySelector('.sidebar');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    
     // Initialize
     sessionIdDisplay.textContent = sessionId.substring(0, 8);
     
@@ -237,4 +243,27 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Failed to clear memory');
         }
     });
+
+    // --- Mobile Sidebar Logic ---
+    function openSidebar() {
+        sidebar.classList.add('active');
+        mobileOverlay.classList.add('active');
+    }
+    
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+    }
+    
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', openSidebar);
+    }
+    
+    if (closeSidebarBtn) {
+        closeSidebarBtn.addEventListener('click', closeSidebar);
+    }
+    
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', closeSidebar);
+    }
 });

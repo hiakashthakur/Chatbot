@@ -17,6 +17,9 @@
 <body>
     <div class="app-container">
         
+        <!-- Mobile Overlay -->
+        <div id="mobileOverlay" class="mobile-overlay"></div>
+
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-header">
@@ -28,6 +31,12 @@
                     </svg>
                     <h1>Nexus RAG</h1>
                 </div>
+                <button id="closeSidebarBtn" class="close-sidebar-btn" title="Close Menu">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
             </div>
 
             <div class="sidebar-content">
@@ -72,7 +81,16 @@
         <!-- Main Chat Area -->
         <main class="chat-container">
             <header class="chat-header">
-                <h2>Knowledge Assistant</h2>
+                <div class="header-left">
+                    <button id="mobileMenuBtn" class="mobile-menu-btn" title="Open Menu">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    <h2>Knowledge Assistant</h2>
+                </div>
                 <div class="session-id-display">
                     Session: <span id="sessionIdDisplay">generating...</span>
                 </div>
