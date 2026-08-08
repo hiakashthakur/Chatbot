@@ -1,0 +1,2 @@
+class IngestionException(Exception):
+    pass

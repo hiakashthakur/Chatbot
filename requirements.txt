@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+qdrant-client
+sentence_transformers
+dotenv
+qdrant_client
+google-genai
+pypdf
+langchain_text_splitters
+rank_bm25
+python-multipart
